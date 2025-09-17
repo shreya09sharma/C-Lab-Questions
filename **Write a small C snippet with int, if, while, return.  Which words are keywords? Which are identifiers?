@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int Calsum(int n)
+{
+    int c=1;
+    int sum=0;
+    while(c<=n)
+    {
+        if(c%2==0)
+        {
+            sum=sum+c;
+        }
+        c=c+1;
+    }
+    return sum;
+}    
+int main()
+{
+    int r=Calsum(5);
+    printf("the sum of even numbers upto 5 is %d \n", r);
+    return 0;
+}
+**keywords are reserved words in C with predefined meanings and cannot be used as identifiers. In the snippet above, the keywords a
+if
+while
+return
+include
+main
+stdio.h (part of a preprocessor directive, not a keyword itself, but essential for the example)
+printf (a standard library function, not a keyword)
+
+**Identifiers are user-defined names given to variables, functions,
+and other program elements. In the snippet above, 
+the identifiers are: counter (variable name), main (function name),
+and printf (function name from the standard library).
