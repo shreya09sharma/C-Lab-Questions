@@ -1,0 +1,48 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+    // Write C code here
+    int main() {
+    int n;
+    int i;
+    int k;
+
+printf("enter the size  elements of an array in ascending order\n ");
+scanf("%d", &n);
+int arr[n];
+printf("enter the elements in ascending order\n");
+for(int i=0;i<n;i++)
+{
+    
+    printf("elements  %d",i+1);
+    scanf(" %d" ,&arr[i]);
+    
+}
+
+
+printf("enter the value of k\n");
+scanf("%d", &k);
+k=k%n;
+ int temp[n];
+
+    for (int i = 0; i < n; i++) 
+    {
+        temp[(i + k) % n] = arr[i];
+    }
+
+
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = temp[i];
+    }
+
+    printf("Array after rotating by %d positions:\n", k);
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
+    
