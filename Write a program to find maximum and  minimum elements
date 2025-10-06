@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main() 
+{
+    int m,n;
+    printf("Enter rows and columns:");
+    scanf("%d%d",&m,&n);
+    int a[m][n];
+    printf("Enter array elemnts:");
+    for(int i=0;i<m;i++)
+    {
+        for(int j=0;j<n;j++)
+        {
+            scanf("%d",&a[i][j]);
+        }
+    }
+    int max,min=0;
+    for(int i=0;i<m;i++)
+    {
+        max=a[i][0];
+        min=a[i][0];
+        for(int j=0;j<n;j++)
+        {
+            if(a[i][j]>max)
+            max=a[i][j];
+            if(a[i][j]<min)
+            min=a[i][j];
+        }
+        printf("\nMaximum in row %d = %d",i+1,max);
+        printf("\nMinimum in row %d = %d",i+1,min);
+        max=0;
+        min=0;
+    }
+  
+  for(int i=0;i<n;i++)
+    {
+        max=a[0][i];
+        min=a[0][i];
+        for(int j=0;j<m;j++)
+        {
+            if(a[j][i]>max)
+            max=a[j][i];
+            if(a[j][i]<min)
+            min=a[j][i];
+        }
+        printf("\nMaximum in column %d = %d",i,max);
+        printf("\nMinimum in column %d = %d",i,min);
+        
+    }
+    
+
+return 0;
+}
