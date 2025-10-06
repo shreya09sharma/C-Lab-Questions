@@ -1,0 +1,48 @@
+
+#include <stdio.h>
+int main() {
+    
+    int r,c;
+    int j;
+    int i;
+    int sum=0;
+printf("enter the number of rows\n");
+scanf("%d", &r);
+printf("enter the number of coloumns\n");
+scanf("%d", &c);
+int arr[r][c];
+int rowsum[r];
+int colsum[c];
+for(int j=0;j<c;j++)
+{
+    colsum[j]=0;
+}
+for(int i=0;i<r;i++)
+{
+    int sum=0;
+    for(int j=0;j<c;j++)
+
+    {
+    printf("elements [%d][%d]=",i,j);
+    scanf("%d",&arr[i][j]);
+    sum=sum+arr[i][j];
+    colsum[j]=colsum[j]+arr[i][j];
+    }
+    rowsum[i]=sum;
+    
+}
+ printf("\nSum of each row:\n");
+    for (int i = 0; i < r; i++) 
+    {
+        printf("Row %d sum = %d\n", i, rowsum[i]);
+    }
+    printf("\n Sum of each column:\n");
+    {
+        for(int j=0;j<c;j++)
+        {
+            printf("column %d sum=%d\n", j,colsum[j]);
+        }
+    }
+
+    return 0;
+}
