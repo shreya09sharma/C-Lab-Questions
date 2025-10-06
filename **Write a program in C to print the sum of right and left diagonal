@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+   int n;
+   
+   printf("Enter the row size or column size");
+   scanf("%d",&n);
+   int a[n][n];
+   for(int i=0;i<n;++i)
+   {
+       for(int j=0;j<n;++j)
+       {
+          printf("Enter the number");
+          scanf("%d",&a[i][j]);
+       }
+   }
+    int sumr=0;
+   int suml=0;
+   for(int i=0;i<n;++i)
+   {
+       for(int j=0;j<n;++j)
+       {
+          if(i==j)
+          suml=suml+a[i][j];
+          if(i+j==n-1)
+          sumr=sumr+a[i][j];
+       }
+   }
+  printf("The sum of right diagonal is %d",sumr);
+  printf("\nThe sum of left diagonal is %d",suml);
+   
+    return 0;
+}
