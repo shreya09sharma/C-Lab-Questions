@@ -1,0 +1,44 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    int n;
+    printf("enter the size of an array elements\n");
+    scanf("%d", &n);
+    int arr[n];
+    int esum=0;
+    int osum=0;
+    int diff=0;
+    printf("\n the elements of an array\n");
+    for(int i=0;i<n;i++)
+    {
+        printf("elements %d",i +1);
+        scanf("%d", &arr[i]);
+    }
+    for(int i=0;i<n;i++)
+    
+    {
+        printf("%d\n", arr[i]);
+    }
+    
+
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]%2==0)
+        {
+            esum=esum+arr[i];
+        }
+        else
+        {
+            osum=osum+arr[i];
+        }
+    }
+    diff=esum-osum;
+    
+    printf("\nthe sum of even numbers\n%d", esum);
+    printf("\nthe sum of odd numbers\n%d",osum);
+    printf("\nthe difference \n%d",diff);
+
+    return 0;
+}
