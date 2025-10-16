@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+printf("enter the elements of an array\n");
+scanf("%d", &n);
+int arr[n];
+for(int i=0;i<n;i++)
+{
+    printf("elements %d",i+1);
+    scanf("%d",&arr[i]);
+    
+}
+
+printf("\n the original array is\n");
+for(int i=0;i<n;i++)
+{
+    printf("%d\n", arr[i]);
+}
+int mfreq=0;
+for(int i=0;i<n;i++)
+{
+    int count=1;
+    for(int j=i+1;j<n;j++)
+    {
+    if(arr[i]==arr[j])
+    {
+    
+        count++;
+    } 
+}
+
+if(count>mfreq)
+{
+    mfreq=count;
+}
+}
+printf("%dthe frequency of the most occured element is%d\n", mfreq);
+    return 0;
+}
