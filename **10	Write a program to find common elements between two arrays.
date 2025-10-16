@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int i;
+    int a;
+printf("enter the elements of an array\n");
+scanf("%d", &n);
+int arr[n];
+for(int i=0;i<n;i++)
+{
+    printf("elements %d",a+1);
+    scanf("%d",&arr[i]);
+    
+}
+
+printf("\n the original array is\n");
+for(int i=0;i<n;i++)
+{
+    printf("%d\n", arr[i]);
+}
+ int s;
+printf("enter the elements of an array\n");
+scanf("%d", &s);
+int array[s];
+for(int a=0;a<s;a++)
+{
+    printf("elements %d",i+1);
+    scanf("%d",&arr[a]);
+    
+}
+
+printf("\n the original array is\n");
+for(int a=0;a<n;a++)
+{
+    printf("%d\n", array[a]);
+}
+printf("\nCommon elements:\n");
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < s; j++) 
+        {
+            if (arr[i] == array[j])
+            {
+                printf("%d ", arr[i]);
+            }
+        }
+    }
+
+    return 0;
+}
