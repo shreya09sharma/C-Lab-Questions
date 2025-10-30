@@ -1,0 +1,30 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    // Write C code here
+    char str[100];
+    int word=0;
+    printf("enter a string");
+    fgets(str,100,stdin);
+    int c=0;
+    for(int i=0;str[i]!='\0'; i++)
+    {
+        if (str[i] != ' ' && str[i] != '\t' && str[i] != '\n') 
+        {
+            
+            if (word == 0)
+            {  
+                c++;
+                word = 1;
+            }
+    }
+    else
+    { 
+        word=0;
+        
+    }
+}
+    printf("Number of words: %d\n", c);
+    return 0;
+}
