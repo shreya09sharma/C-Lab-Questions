@@ -16,7 +16,7 @@ int main() {
         sum = sum + term;
     }
 
-    printf("Sum of the series = %.6lf\n", sum);
+    printf("Sum of the series = %lf\n", sum);
 
     return 0;
 }
