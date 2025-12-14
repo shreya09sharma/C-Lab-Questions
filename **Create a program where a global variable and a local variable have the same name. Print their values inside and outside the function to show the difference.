@@ -1,0 +1,16 @@
+#include <stdio.h>
+int a;
+void local()
+{
+    register int a=55;
+    printf("%d", a);
+}
+
+int main() 
+  {
+   local();
+   a=100;
+   printf("\n %d", a);
+   return 0;
+    
+  }
