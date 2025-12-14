@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    float x;
+    double sum = 1.0, term = 1.0;
+
+    printf("Enter value of x: ");
+    scanf("%f", &x);
+
+    printf("Enter value of n: ");
+    scanf("%d", &n);
+
+    for (int i = 1; i <= n; i++) {
+        term = term * x / i;   
+        sum = sum + term;
+    }
+
+    printf("Sum of the series = %.6lf\n", sum);
+
+    return 0;
+}
